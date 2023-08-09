@@ -115,10 +115,10 @@ scala_library(
 """
 
 def rules_spice4s_repositories():
-  spice4s_version = "1d8835829ae4e669e8fae88801c44e0b50beac31"
+  spice4s_version = "22c1c6dcc59b4bbc8458052ca8a184e5a23234f2"
   http_archive(
       name = "spice4s",
-      sha256 = "8410832c7fadaac05b5d052efe296f0ebfd01e89267c744c9aeb29abb8ba4581",
+      # sha256 = "8410832c7fadaac05b5d052efe296f0ebfd01e89267c744c9aeb29abb8ba4581",
       strip_prefix = "spice4s-%s" % spice4s_version,
       type = "zip",
       url = "https://github.com/casehubdk/spice4s/archive/%s.zip" % spice4s_version,
