@@ -44,6 +44,23 @@ scala_library(
 )
 
 scala_library(
+  name = "spice4s-generator-core",
+  scalacopts = ["-Xsource:3"],
+  srcs = glob([
+    "generator-core/src/main/scala/**/*.scala"
+  ]),
+  plugins = [
+      "@maven//:com_olegpy_better_monadic_for_2_13",
+      "@maven//:org_typelevel_kind_projector_2_13_11",
+  ],
+  visibility = ["//visibility:public"],
+  deps = [
+    ":s4s_gen",
+    ":spice4s-client",
+  ]
+)
+
+scala_library(
   name = "spice4s-parser",
   scalacopts = ["-Xsource:3"],
   srcs = glob([
