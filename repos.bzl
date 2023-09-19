@@ -149,7 +149,7 @@ scala_library(
 """
 
 def rules_spice4s_repositories():
-  spice4s_version = "fd66f9faa04b4e835f484752079a307f4e118fc4"
+  spice4s_version = "8143af272a0546028bf218b3d102475cd72acc8d"
   http_archive(
       name = "spice4s",
       # sha256 = "8410832c7fadaac05b5d052efe296f0ebfd01e89267c744c9aeb29abb8ba4581",
