@@ -44,6 +44,23 @@ scala_library(
 )
 
 scala_library(
+  name = "spice4s-testkit",
+  scalacopts = ["-Xsource:3"],
+  srcs = glob([
+    "testkit/src/main/scala/**/*.scala"
+  ]),
+  plugins = [
+      "@maven//:com_olegpy_better_monadic_for_2_13",
+      "@maven//:org_typelevel_kind_projector_2_13_11",
+  ],
+  visibility = ["//visibility:public"],
+  deps = [
+    ":spice4s-client",
+    ":s4s_gen",
+  ]
+)
+
+scala_library(
   name = "spice4s-encoder",
   scalacopts = ["-Xsource:3"],
   srcs = glob([
