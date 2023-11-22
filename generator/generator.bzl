@@ -1,5 +1,9 @@
 load("@io_bazel_rules_scala//scala/private:common.bzl", "collect_jars")
 
+# TODO take a look at the following sources for inspiration on how to do this properly:
+# https://github.com/bazelbuild/rules_scala/blob/9c0f6b942b2a2555c41b622b41280a45bf7cb92e/scala/private/phases/phase_coverage.bzl#L62
+# https://github.com/bazelbuild/rules_scala/blob/master/scala/private/common_attributes.bzl#L75
+# https://github.com/bazelbuild/rules_scala/blob/master/src/java/io/bazel/rulesscala/coverage/instrumenter/BUILD
 def _new_generator_command(ctx, out_file, jars):
   java_path = ctx.attr._jdk[java_common.JavaRuntimeInfo].java_executable_exec_path
   gen_cmd = str(java_path)
