@@ -3,10 +3,18 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 spice4s_build_file = """
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library")
 load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scala_proto_library")
+load("@fs2_grpc//protopkg:genprotopkg.bzl", "genprotopkg")
+
+genprotopkg(
+  name = "protolib_fix",
+  package = "google.rpc",
+  flat_package = False,
+  prefix = "proto/src/main/protobuf/"
+)
 
 proto_library(
     name = "protolib",
-    srcs = glob(["proto/src/main/**/*.proto"]),
+    srcs = glob(["proto/src/main/**/*.proto"]) + [":protolib_fix"],
     visibility = ["//visibility:public"],
     deps = [
       "@common_protos//:scalapb_protos",
@@ -15,6 +23,7 @@ proto_library(
       "@fs2_grpc//validate",
       "@google_api_common_protos//google/api:annotations_proto",
       "@google_api_common_protos//google/api:http_proto",
+      "@google_api_common_protos//:rpc_protos"
     ],
     strip_import_prefix = "proto/src/main/protobuf"
 )
