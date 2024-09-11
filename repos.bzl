@@ -44,7 +44,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -60,7 +60,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -77,7 +77,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -94,7 +94,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -111,7 +111,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -129,7 +129,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
@@ -157,7 +157,7 @@ scala_library(
   ]),
   plugins = [
       "@maven//:com_olegpy_better_monadic_for_2_13",
-      "@maven//:org_typelevel_kind_projector_2_13_12",
+      "@maven//:org_typelevel_kind_projector_2_13_14",
   ],
   visibility = ["//visibility:public"],
   deps = [
